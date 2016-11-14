@@ -1,14 +1,14 @@
-# Senketsu
+# Junketsu
 
-Yeoman generator for React + Redux applications.
+Yeoman generator for React + Redux applications with TypeScript
 
 ## Generators
 
 ### app
 ```
-yo senketsu
+yo junketsu
 ```
-Run the default 'app' generator. You can also run this with `yo senketsu:app` if you want to be
+Run the default 'app' generator. You can also run this with `yo junketsu:app` if you want to be
 very explicit about things.
 ```
 ? Project name        - Name of the project.
@@ -17,7 +17,7 @@ very explicit about things.
 
 ### state
 ```
-yo senketsu:state
+yo junketsu:state
 ```
 Add a piece of state to your application. Note that you can specify async action creators by adding
 a `*` as an affix character.
@@ -29,7 +29,7 @@ a `*` as an affix character.
 
 ### component
 ```
-yo senketsu:component
+yo junketsu:component
 ```
 Add either a new view (container) or a basic component with optional connection to redux.
 ```
