@@ -1,0 +1,72 @@
+import 'app/<%= type %>s/<%= file %>/style'
+
+<%_ if (isContainer) { _%>
+import React       from 'react'
+import { connect } from 'react-redux'
+<%_ } else { _%>
+import React from 'react'
+<%_ } _%>
+
+<%_ if (isContainer) { _%>
+interface OwnProps {
+
+}
+
+interface StateProps {
+
+}
+
+interface DispatchProps {
+
+}
+
+type Props = OwnProps & StateProps & DispatchProps
+<%_ } else { _%>
+interface Props {
+
+}
+<%_ } _%>
+<%_ if (isStateful) { _%>
+
+interface State {
+
+}
+<%_ } _%>
+
+/**
+ * TODO Documentation
+ */
+<%_ if (isContainer || isStateful) { _%>
+  <%_ if (isStateful) { _%>
+class <%= name %> extends React.Component<Props, State> {
+  state = {
+
+  }
+
+  <%_ } else { _%>
+class <%= name %> extends React.Component<Props, {}> {
+  <%_ } _%>
+  render() {
+    return (
+      <div className="<%= file %>-<%= type %>" />
+    )
+  }
+}
+<%_ } else { _%>
+const <%= name %> = (props: Props) => (
+  <div className="<%= file %>-<%= type %>" />
+)
+<%_ } _%>
+<%_ if (isContainer) { _%>
+
+const smart = connect<StateProps, DispatchProps, OwnProps>(
+  state => ({
+
+  }),
+  dispatch => ({
+
+  })
+)
+<%_ } _%>
+
+export default <%= name %>

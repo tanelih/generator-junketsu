@@ -1,0 +1,29 @@
+<%_ actions.forEach(function(action) { _%>
+  <%_ if(action.async) { _%>
+/**
+ * TODO Documentation.
+ */
+export function <%= action.creator %>() {
+  return function(dispatch) {
+    dispatch({
+      payload: {
+
+      },
+      type: '<%= action.constant %>_SUCCESS'
+    })
+  }
+}
+  <%_ } else { _%>
+/**
+ * TODO Documentation.
+ */
+export function <%= action.creator %>(): FSA<Object> {
+  return {
+    payload: {
+
+    },
+    type: '<%= action.constant %>'
+  }
+}
+  <%_ } _%>
+<%_ }) _%>

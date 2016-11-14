@@ -1,0 +1,26 @@
+import createReducer from 'app/utils/create-reducer'
+
+/**
+ * Type definition for the shape of the reducer's state.
+ */
+export type Shape = <%= initialStateType %>
+
+/**
+ * The reducer's initial state.
+ */
+export const initialState: <%= initialStateType %> = <%- initialState %>
+
+/**
+ * Map of handlers.
+ */
+const handlers = {
+  <%_ actions.forEach(function(action) { _%>
+    <%_ if(action.async) { _%>
+  <%= action.constant %>_SUCCESS: (state: <%= initialStateType %>, action: FSA<<%= initialStateType %>>) => action.payload,
+    <%_ } else { _%>
+  <%= action.constant %>: (state: <%= initialStateType %>, action: FSA<<%= initialStateType %>>) => action.payload,
+    <%_ } _%>
+  <%_ }) _%>
+}
+
+export default createReducer(handlers, initialState)
