@@ -6,7 +6,7 @@
 export default {
   INDEX_CONTAINER: {
     TITLE: {
-      en: 'Hello World!'
-    }
-  }
+      en: 'Hello World!',
+    },
+  },
 }

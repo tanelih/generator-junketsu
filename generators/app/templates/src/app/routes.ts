@@ -1,3 +1,5 @@
+/* tslint:disable:no-shadowed-variable */
+
 declare var require: any
 
 /**

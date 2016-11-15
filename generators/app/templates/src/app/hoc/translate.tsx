@@ -2,16 +2,16 @@ import React        from 'react'
 import { connect }  from 'react-redux'
 import { isObject } from 'lodash'
 
-interface WrappedProps {
+interface IWrappedProps {
   translate: TranslateFunc
 }
 
-type Wrappable = React.ComponentClass<{} & WrappedProps>
+type Wrappable = React.ComponentClass<{} & IWrappedProps>
 
 /**
  * Type declaration for the translation function provided by this HOC.
  */
-export type TranslateFunc = (...string) => string
+export type TranslateFunc = (...keys: string[]) => string
 
 /**
  * Higher order component for providing translation to components.

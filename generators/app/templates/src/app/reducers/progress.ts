@@ -1,5 +1,6 @@
-import createReducer from 'app/utils/create-reducer'
-
+/**
+ * Type declaration for this reducer's state.
+ */
 export type Shape = Array<ActionType>
 
 /**

@@ -1,6 +1,16 @@
 import createReducer from 'app/utils/create-reducer'
 
-export type Err   = { error: Error, origin: string }
+/**
+ * Internal type declaration for this reducer's state.
+ */
+type Err = {
+  error: Error,
+  origin: string
+}
+
+/**
+ * Type declaration for this reducer's state.
+ */
 export type Shape = Array<Err>
 
 /**

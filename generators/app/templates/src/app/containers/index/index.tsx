@@ -7,25 +7,25 @@ import translate, { TranslateFunc } from 'app/hoc/translate'
 
 declare var require: any
 
-interface OwnProps {
+interface IOwnProps {
   translate: TranslateFunc
 }
 
-interface StateProps {
+interface IStateProps {
   locale: string
 }
 
-interface DispatchProps {
+interface IDispatchProps {
 
 }
 
-type Props = OwnProps & StateProps & DispatchProps
+type Props = IOwnProps & IStateProps & IDispatchProps
 
 /**
  * Container for the 'index' view.
  */
 class IndexContainer extends React.Component<Props, void> {
-  render() {
+  public render() {
     return (
       <article className="index-container">
         <h1>
@@ -36,9 +36,9 @@ class IndexContainer extends React.Component<Props, void> {
   }
 }
 
-const smart = connect<StateProps, DispatchProps, OwnProps>(
+const smart = connect<IStateProps, IDispatchProps, IOwnProps>(
   state => ({
-    locale: state.locale
+    locale: state.locale,
   })
 )
 

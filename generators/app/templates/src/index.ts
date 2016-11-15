@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 
-declare var module:  any
+declare var module: any
 declare var require: any
 
 const mount  = document.getElementById('app')

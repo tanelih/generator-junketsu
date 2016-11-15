@@ -1,3 +1,6 @@
+
+/* tslint:disable:no-unused-variable */
+
 import 'app/style'
 
 import React        from 'react'
@@ -11,7 +14,7 @@ import routes      from 'app/routes'
 import createStore from 'app/store'
 
 /**
- * The appplication's store, history etc.
+ * The application's store, history etc.
  */
 const store   = createStore(browserHistory)
 const history = syncHistoryWithStore(browserHistory, store)

@@ -34,7 +34,6 @@ yo junketsu:component
 Add either a new view (container) or a basic component with optional connection to redux.
 ```
 ? Component name    - Component name in PascalCase.
-? Component type    - Either view (container) or component.
 ? Component options - Make component "smart" to connect it to the redux store.
 ```
 

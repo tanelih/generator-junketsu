@@ -9,11 +9,11 @@ declare var require: Function
 /**
  * Interface definition for the shape of the application state.
  */
-export interface StoreShape {
-  locale:   LocaleShape
-  errors:   ErrorsShape
+export interface IStoreShape {
+  locale: LocaleShape
+  errors: ErrorsShape
   progress: ProgressShape
-  routing:  ReduxRouter.DefaultSelectLocationState
+  routing: ReduxRouter.DefaultSelectLocationState
 }
 
 /**
